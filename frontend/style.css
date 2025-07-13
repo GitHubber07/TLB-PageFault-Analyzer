@@ -1,0 +1,186 @@
+/* Global Reset + Font */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Container */
+.container {
+  max-width: 700px;
+  width: 100%;
+}
+
+/* Header */
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 8px rgba(31, 162, 255, 0.3);
+  color: #00d1b2;
+}
+
+/* Card Styling */
+.card {
+  background-color: #1e1e1e;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 209, 178, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Fancy Label Text */
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #cceeff;
+}
+
+/* Inputs + Selects */
+input, select {
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+/* Button */
+button {
+  padding: 12px;
+  background-color: #00d1b2;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #00a894;
+  transform: scale(1.05);
+}
+
+/* Output Section */
+#output-section {
+  margin-top: 40px;
+}
+
+#output-section h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #1fa2ff;
+  font-weight: 600;
+  text-shadow: 1px 1px 8px rgba(31, 162, 255, 0.3);
+  margin-bottom: 20px;
+}
+
+/* Stylized Output Table */
+.output-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  animation: fadeIn 0.5s ease;
+}
+
+.output-table th, .output-table td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.output-table th {
+  background-color: #222;
+  color: #00d1b2;
+}
+
+.output-table tr.hit {
+  background-color: #1c2f1c;
+  color: #7CFC00;
+}
+
+.output-table tr.miss {
+  background-color: #2f1c1c;
+  color: #ff6b6b;
+}
+
+.output-table tr:hover {
+  background-color: #2a2a2a;
+  transition: 0.3s;
+}
+
+/* Frame change animation */
+.output-table td.changed {
+  background-color: #3a3a5a;
+  animation: pulse 0.5s;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Timeline visualization */
+.timeline {
+  margin-top: 30px;
+  overflow-x: auto;
+}
+
+.frames {
+  display: flex;
+  gap: 5px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 50px;
+}
+
+.frame {
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: center;
+  background: #2a2a2a;
+  border-radius: 4px;
+}
+
+.frame.active {
+  background: #00d1b2;
+  color: #121212;
+  font-weight: bold;
+}
+
+.export-btn {
+  margin-top: 20px;
+  background: #1fa2ff !important;
+}
+.export-btn:hover {
+  background: #0d8bf0 !important;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
